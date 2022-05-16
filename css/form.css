@@ -52,3 +52,35 @@ button {
 .titulo {
     margin-left: 8px;
 }
+
+.lgpd-title {
+    display: block;
+    width: 300px;
+    border-radius: 10px;
+    height: 26px;
+    margin: 8px;
+    font-size: 13px;
+    padding: 5px;
+}
+
+.lgpd {
+    font-size: small;
+    color: rgb(143, 141, 141);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.lgpd-checkbox {
+    font-size: 11px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.lgpd-checkbox-label {
+    display: inline;
+    font-size: 13px;
+}
+
+.break {
+    flex-basis: 50%;
+    height: 0;
+}
