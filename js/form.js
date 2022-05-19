@@ -1,15 +1,15 @@
 //class contato
-
+var formData = {};
 class contato {
   constructor(nome, sobrenome, email, cpf, telefone, contato, terms, news) {
-    this.nome = nome;
-    this.sobrenome = sobrenome;
-    this.email = email;
-    this.cpf = cpf;
+    this._nome = nome;
+    this._sobrenome = sobrenome;
+    this._email = email;
+    this._cpf = cpf;
     this.telefone = telefone;
     this.contato = contato;
     this.terms = terms;
-    this.contato = contato;
+    this.news = news;
   }
 }
 
@@ -24,13 +24,13 @@ function Post(form) {
     form.elements.namedItem("terms").value,
     form.elements.namedItem("news").value
   );
+  formData = JSON.stringify(data);
+  localStorage.setItem("Dados-usuario", formData);
 }
 
 function Enviar() {
-  console.log(formData);
   var nome = document.getElementById("nomeid");
-
-  if (nome.value != "") {
+  if (nome.value != "" && formData) {
     alert(
       "Obrigado sr(a) " +
         nome.value +
